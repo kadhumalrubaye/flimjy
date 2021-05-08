@@ -1,0 +1,28 @@
+{
+    "appTitle":"Flimjy",
+    "Favorite":"Favorite",
+    "Play":"Play",
+    "Details":"Detail",
+
+    
+    "Overview":"OverView",
+    "ReleaseDate":"Release date",
+    "RunTime":"run time",
+    "Budget":"budget",
+    "ScreenShots":"Screenshots",
+    "Casts":"Casts",
+    "Upcoming":"Upcoming movies",
+    "TrendingPersonOnThisWeek": "Trending persons on this week",
+    "NewPlaying":"New playing",
+    "TopMovies":"Top movies",
+
+    "History":"History",
+    "Movies":"Movies",
+    "WatchLater":"Watch later",
+    "Series":"Series",
+
+    "NoOverView":"Not available"
+        
+           
+        
+}

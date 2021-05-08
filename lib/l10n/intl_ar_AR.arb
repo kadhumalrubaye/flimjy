@@ -1,0 +1,46 @@
+{
+    "appTitle":"فلمجي",
+    "Favorite":"مفضلة",
+    "Play":"تشغيل",
+    "Details":"تفاصيل ",
+
+    "History":"مشاهداتي",
+    "Movies":"الافلام",
+    "WatchLater":"مشاهدة لاحقا",
+    "Series":"مسلسلات",
+
+    "Overview":"الوصف",
+    "ReleaseDate":"موعد الاطلاق",
+    "RunTime":"المدة",
+    "Budget":"الميزانية",
+    "ScreenShots":"لقطات الشاشة",
+    "Casts":"الممثلون",
+    "Upcoming":" قريبا",
+    "NewPlaying":"عروض جديدة",
+    "TopMovies":"افضل الافلام",
+    "TrendingPersonOnThisWeek": "المشاهير المتداولون لهذا الاسبوع",
+
+    "NoOverView":"لا يوجد وصف بللغة العربية ",
+
+    "Adventure":"مغامرة",
+    "Animation":"انمي",      
+    "Comedy":"كوميديا",
+    "Crime":"جريمة",
+    "Documentary":"وثائقي",    
+    "Drama":"دراما",
+    "Family":"عائلي",
+    "Action":"اكشن",
+    " Fantasy":"فانتازيا",
+    " History":"تاريخي",
+    " Horror":"رعب",
+    " Music":"موسيقى",
+    " Mystery":"غموض",
+    " Romance":"رومانسي",
+    " Science":"خيال علمي", 
+    " Thriller":"قصص",
+    " War":"حرب",
+    " Western":"الجنوب الامريكي",
+    " TV":" فيلم تلفازي", 
+    "Movie":"فلم"
+   
+}
