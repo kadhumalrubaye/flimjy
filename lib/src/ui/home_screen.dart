@@ -2,8 +2,12 @@ import 'dart:io';
 
 import 'package:cached_network_image/cached_network_image.dart';
 import 'package:carousel_slider/carousel_slider.dart';
+import 'package:connectivity_plus/connectivity_plus.dart';
 import 'package:filmjy/src/bloc/genrebloc/genre_bloc.dart';
 import 'package:filmjy/src/bloc/genrebloc/genre_event.dart';
+import 'package:filmjy/src/bloc/userbloc/user_bloc.dart';
+import 'package:filmjy/src/bloc/userbloc/user_events.dart';
+import 'package:filmjy/src/constance/enums.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -78,7 +82,9 @@ class HomeScreen extends StatelessWidget {
                     child: Text(S.of(context).WatchLater.toString()),
                   ),
                   TextButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      Navigator.pushNamed(context, '/history');
+                    },
                     child: Text(S.of(context).History),
                   ),
                   TextButton(
@@ -143,6 +149,7 @@ class HomeScreen extends StatelessWidget {
                               Movie movie = movies[index];
                               return GestureDetector(
                                 onTap: () {
+                                  context.read<UserBloc>().emitHistory(movie);
                                   Navigator.push(
                                     context,
                                     MaterialPageRoute(
@@ -230,10 +237,19 @@ class HomeScreen extends StatelessWidget {
                           ),
                         ],
                       );
+                    } else if (state is MovieError) {
+                      return Center(
+                        child: Column(
+                          children: [
+                            Text(S.of(context).something_wrong),
+                          ],
+                        ),
+                      );
                     } else {
-                      // return Container(
-                      //   child: Text('Something went wrong!!!'),
-                      // );
+                      return Container(
+                        child:
+                            Center(child: Text(S.of(context).something_wrong)),
+                      );
                     }
                   },
                 ),

@@ -36,3 +36,9 @@ class GetMoviesEvent extends MovieEvent {
 
   List<Object> get props => [];
 }
+
+class ErrorEvent extends MovieEvent {
+  const ErrorEvent();
+
+  List<Object> get props => [];
+}

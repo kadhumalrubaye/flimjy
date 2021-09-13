@@ -224,6 +224,26 @@ class S {
       args: [],
     );
   }
+
+  /// `Something went wrong!!!`
+  String get something_wrong {
+    return Intl.message(
+      'Something went wrong!!!',
+      name: 'something_wrong',
+      desc: '',
+      args: [],
+    );
+  }
+
+  /// `No internet connection!`
+  String get no_internet_connection {
+    return Intl.message(
+      'No internet connection!',
+      name: 'no_internet_connection',
+      desc: '',
+      args: [],
+    );
+  }
 }
 
 class AppLocalizationDelegate extends LocalizationsDelegate<S> {

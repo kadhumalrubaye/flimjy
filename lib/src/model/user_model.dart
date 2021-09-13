@@ -1,9 +1,13 @@
 import 'movie.dart';
 
 class UserModel {
-  String name;
-  String password;
-  List<Movie> history;
-  List<Movie> watchLater;
-  List<Movie> favorite;
+  final String name;
+  final String password;
+  final List<Movie> history;
+
+  final List<Movie> watchLater;
+  final List<Movie> favorite;
+
+  UserModel(
+      this.name, this.password, this.history, this.watchLater, this.favorite);
 }

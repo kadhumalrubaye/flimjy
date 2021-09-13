@@ -1,3 +1,5 @@
+import 'package:filmjy/src/ui/history_screen.dart';
+import 'package:filmjy/src/ui/profile_screen.dart';
 import 'package:flutter/material.dart';
 
 import '../ui/descover_movies_screen.dart';
@@ -19,6 +21,10 @@ class Routes {
         return MaterialPageRoute(builder: (_) => MovieDetailScreen());
       case RouteName.moviesScreen:
         return MaterialPageRoute(builder: (_) => DiscoverMovieScreen());
+      case RouteName.history:
+        return MaterialPageRoute(builder: (_) => HistoryScreen());
+      case RouteName.profileScreen:
+        return MaterialPageRoute(builder: (_) => ProfileScreen());
       case RouteName.movieDetailScreen:
         return MaterialPageRoute(
           builder: (_) => MovieDetailScreen(),
@@ -45,4 +51,5 @@ class RouteName {
   static const moviesScreen = '/movies';
   static const profileScreen = '/profile';
   static const searchScreen = '/search';
+  static const history = '/history';
 }

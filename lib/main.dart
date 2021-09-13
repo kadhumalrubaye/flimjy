@@ -1,3 +1,8 @@
+import 'package:connectivity_plus/connectivity_plus.dart';
+import 'package:filmjy/src/bloc/internetbloc/InternetCubit.dart';
+import 'package:filmjy/src/bloc/internetbloc/InternetState.dart';
+import 'package:filmjy/src/bloc/userbloc/user_bloc.dart';
+import 'package:filmjy/src/ui/error/not_internet_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
@@ -7,6 +12,7 @@ import 'generated/l10n.dart';
 import 'src/bloc/languagebloc/lang_bloc.dart';
 import 'src/bloc/languagebloc/lang_event.dart';
 import 'src/bloc/languagebloc/lang_state.dart';
+import 'src/bloc/userbloc/user_events.dart';
 import 'src/statics/routes.dart';
 import 'src/ui/home_screen.dart';
 
@@ -17,6 +23,7 @@ void main() {
 }
 
 class App extends StatelessWidget {
+  final Connectivity connectivity = Connectivity();
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -36,14 +43,37 @@ class App extends StatelessWidget {
       ],
       theme: buildThemeData(),
       debugShowCheckedModeBanner: false,
-      home: BlocProvider<LangBloc>(
-        // lazy: false,
-        create: (context) => LangBloc()..add(DefaultLang()),
-        child: BlocBuilder<LangBloc, LangState>(
-          builder: (context, state) {
-            return HomeScreen();
-          },
-        ),
+      home: MultiBlocProvider(
+        providers: [
+          BlocProvider<UserBloc>(
+            // lazy: false,
+            create: (context) => UserBloc(),
+          ),
+          BlocProvider<LangBloc>(
+            // lazy: false,
+            create: (context) => LangBloc()..add(DefaultLang()),
+          ),
+          BlocProvider<InternetCubit>(
+            // lazy: false,
+            create: (context) => InternetCubit(connectivity),
+          ),
+        ],
+        // child: BlocBuilder<LangBloc, LangState>(
+        //   builder: (context, state) {
+        //     return HomeScreen();
+        //   },
+        // ),
+        child: Builder(builder: (context) {
+          if (context.watch<InternetCubit>().state is InternetDisconnected) {
+            return Container(
+              child: NotInternetScreen(),
+            );
+          } else {
+            return BlocBuilder<LangBloc, LangState>(builder: (context, state) {
+              return HomeScreen();
+            });
+          }
+        }),
       ),
     );
   }

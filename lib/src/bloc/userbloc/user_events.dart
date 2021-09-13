@@ -6,6 +6,10 @@ import '../../model/user_model.dart';
 abstract class UserEvent extends Equatable {}
 
 //events
+class LoadingUserEvent extends UserEvent {
+  @override
+  List<Object> get props => [];
+}
 
 class CreateUserEvent extends UserEvent {
   final UserModel user;

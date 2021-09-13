@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "TrendingPersonOnThisWeek" : MessageLookupByLibrary.simpleMessage("Trending persons on this week"),
     "Upcoming" : MessageLookupByLibrary.simpleMessage("Upcoming movies"),
     "WatchLater" : MessageLookupByLibrary.simpleMessage("Watch later"),
-    "appTitle" : MessageLookupByLibrary.simpleMessage("Flimjy")
+    "appTitle" : MessageLookupByLibrary.simpleMessage("Flimjy"),
+    "no_internet_connection" : MessageLookupByLibrary.simpleMessage("No internet connection!"),
+    "something_wrong" : MessageLookupByLibrary.simpleMessage("Something went wrong!!!")
   };
 }

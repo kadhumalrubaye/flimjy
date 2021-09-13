@@ -37,6 +37,9 @@ class MovieBloc extends Bloc<MovieEvent, MovieState> {
     } else if (event is GetMoviesEvent) {
       final List<Movie> moviesList = await service.getMovies();
       yield GetMoviesState(getMoviesState: moviesList);
+    } else if (event is ErrorEvent) {
+      print('movie error accurse ');
+      yield MovieError();
     }
   }
 }

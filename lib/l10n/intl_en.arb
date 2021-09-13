@@ -21,7 +21,9 @@
     "WatchLater":"Watch later",
     "Series":"Series",
 
-    "NoOverView":"Not available"
+    "NoOverView":"Not available",
+    "something_wrong":"Something went wrong!!!",
+    "no_internet_connection":"No internet connection!"
         
            
         

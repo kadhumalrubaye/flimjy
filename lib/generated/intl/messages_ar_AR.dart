@@ -39,6 +39,8 @@ class MessageLookup extends MessageLookupByLibrary {
     "TrendingPersonOnThisWeek" : MessageLookupByLibrary.simpleMessage("المشاهير المتداولون لهذا الاسبوع"),
     "Upcoming" : MessageLookupByLibrary.simpleMessage(" قريبا"),
     "WatchLater" : MessageLookupByLibrary.simpleMessage("مشاهدة لاحقا"),
-    "appTitle" : MessageLookupByLibrary.simpleMessage("فلمجي")
+    "appTitle" : MessageLookupByLibrary.simpleMessage("فلمجي"),
+    "no_internet_connection" : MessageLookupByLibrary.simpleMessage("لا يوجد اتصال بلانترت"),
+    "something_wrong" : MessageLookupByLibrary.simpleMessage("حدث خطأ غير متوقع")
   };
 }

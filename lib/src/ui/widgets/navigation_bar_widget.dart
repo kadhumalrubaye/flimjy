@@ -24,14 +24,11 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
         _selectedIndex = index;
         switch (index) {
           case 0:
-            Navigator.pushNamed(context, RouteName.moviesScreen);
+            Navigator.pushNamed(context, RouteName.profileScreen);
             break;
+
           case 1:
-            // Navigator.pushNamed(context, '/home');
-            break;
-          case 0:
-            Navigator.push(
-                context, MaterialPageRoute(builder: (_) => ProfileScreen()));
+            Navigator.pushNamed(context, RouteName.moviesScreen);
             break;
           default:
         }
@@ -45,14 +42,14 @@ class _BottomNavigationBarWidgetState extends State<BottomNavigationBarWidget> {
       items: [
         BottomNavigationBarItem(
           icon: new Icon(
-            Icons.explore,
+            Icons.person,
             color: Color.fromRGBO(32, 142, 231, 1.0),
           ),
           label: '',
         ),
         BottomNavigationBarItem(
           icon: new Icon(
-            Icons.home,
+            Icons.explore,
             color: Color.fromRGBO(32, 142, 231, 1.0),
           ),
           label: '',
